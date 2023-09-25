@@ -1,0 +1,32 @@
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  /* Introduction */
+  section.container {
+    margin-bottom: 3rem;
+  }
+  
+  /* Calculator Sections */
+  form {
+    margin-bottom: 2rem;
+  }
+  
+  /* Results Display */
+  #tesla-results, #gasoline-results, #comparison-results {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #6c757d;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
