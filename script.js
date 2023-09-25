@@ -5,7 +5,7 @@ document.getElementById('federalTaxCredit').addEventListener('input', updateCalc
 document.getElementById('referralLinkCredit').addEventListener('input', updateCalculations);
 document.getElementById('plannedMilesDriven').addEventListener('input', updateCalculations);
 document.getElementById('electricityCost').addEventListener('input', updateCalculations);
-document.getElementById('gasolineCost').addEventListener('input', updateCalculations);
+document.getElementById('whPerMile').addEventListener('input', updateCalculations);
 document.getElementById('yearsOfOwnership').addEventListener('input', updateCalculations);
 
 document.getElementById('gasolineBasePrice').addEventListener('input', updateCalculations);
@@ -18,21 +18,12 @@ document.getElementById('gasolineMilesPerGallon').addEventListener('input', upda
 document.getElementById('gasolineGasolineCost').addEventListener('input', updateCalculations);
 document.getElementById('gasolineYearsOfOwnership').addEventListener('input', updateCalculations);
 
-updateCalculations(); // Initialize values
-
 function updateCalculations() {
     let teslaTotalCost = parseFloat(document.getElementById('teslaBasePrice').value.replace(/[^0-9.-]+/g, "")) || 0;
-    teslaTotalCost += parseFloat(document.getElementById('destinationFee').value.replace(/[^0-9.-]+/g, "")) || 0;
-    teslaTotalCost += parseFloat(document.getElementById('additionalOptions').value.replace(/[^0-9.-]+/g, "")) || 0;
-    teslaTotalCost += parseFloat(document.getElementById('federalTaxCredit').value.replace(/[^0-9.-]+/g, "")) || 0;
-    teslaTotalCost += parseFloat(document.getElementById('referralLinkCredit').value.replace(/[^0-9.-]+/g, "")) || 0;
-
     let gasolineTotalCost = parseFloat(document.getElementById('gasolineBasePrice').value.replace(/[^0-9.-]+/g, "")) || 0;
-    gasolineTotalCost += parseFloat(document.getElementById('gasolineDestinationFee').value.replace(/[^0-9.-]+/g, "")) || 0;
-    gasolineTotalCost += parseFloat(document.getElementById('gasolineAdditionalOptions').value.replace(/[^0-9.-]+/g, "")) || 0;
-    gasolineTotalCost += parseFloat(document.getElementById('gasolineFederalTaxCredit').value.replace(/[^0-9.-]+/g, "")) || 0;
-    gasolineTotalCost += parseFloat(document.getElementById('gasolineReferralLinkCredit').value.replace(/[^0-9.-]+/g, "")) || 0;
-
+    
+    // Additional calculations for Tesla and Gasoline can go here
+    
     document.getElementById('tesla-results').innerText = `Total Cost: $${teslaTotalCost}`;
     document.getElementById('gasoline-results').innerText = `Total Cost: $${gasolineTotalCost}`;
     
