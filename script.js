@@ -18,6 +18,8 @@ document.getElementById('gasolineMilesPerGallon').addEventListener('input', upda
 document.getElementById('gasolineGasolineCost').addEventListener('input', updateCalculations);
 document.getElementById('gasolineYearsOfOwnership').addEventListener('input', updateCalculations);
 
+updateCalculations(); // Initialize values
+
 function updateCalculations() {
     let teslaTotalCost = parseFloat(document.getElementById('teslaBasePrice').value.replace(/[^0-9.-]+/g, "")) || 0;
     teslaTotalCost += parseFloat(document.getElementById('destinationFee').value.replace(/[^0-9.-]+/g, "")) || 0;
