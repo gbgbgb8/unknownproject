@@ -20,23 +20,45 @@
     <p>Find out the real cost of ownership for a Tesla Model 3 and a gasoline car. Factor in gas prices, maintenance, and more.</p>
   </section>
 
-  <!-- Tesla Calculator -->
   <section class="container my-5">
     <h2>Tesla Model 3 Calculator</h2>
-    <!-- Input Fields -->
     <form id="tesla-calculator">
-      <!-- various input fields here, e.g. -->
       <div class="mb-3">
         <label for="teslaBasePrice" class="form-label">Base Price</label>
-        <input type="number" class="form-control" id="teslaBasePrice">
+        <input type="text" class="form-control" id="teslaBasePrice" value="$40,240">
       </div>
-      <!-- ... -->
+      <div class="mb-3">
+        <label for="destinationFee" class="form-label">Destination Fee</label>
+        <input type="text" class="form-control" id="destinationFee" value="$1,390">
+      </div>
+      <div class="mb-3">
+        <label for="additionalOptions" class="form-label">Additional Options</label>
+        <input type="text" class="form-control" id="additionalOptions" value="$0">
+      </div>
+      <div class="mb-3">
+        <label for="federalTaxCredit" class="form-label">Federal Tax Credit</label>
+        <input type="text" class="form-control" id="federalTaxCredit" value="-$7,500">
+      </div>
+      <div class="mb-3">
+        <label for="referralLinkCredit" class="form-label">Referral Link Credit</label>
+        <input type="text" class="form-control" id="referralLinkCredit" value="-$500">
+      </div>
+      <div class="mb-3">
+        <label for="plannedMilesDriven" class="form-label">Planned Miles Driven per Year</label>
+        <input type="text" class="form-control" id="plannedMilesDriven" value="15,000">
+      </div>
+      <div class="mb-3">
+        <label for="electricityCost" class="form-label">Electricity Cost ($/kWh)</label>
+        <input type="text" class="form-control" id="electricityCost" value="$0.16">
+      </div>
+      <div class="mb-3">
+        <label for="gasolineCost" class="form-label">Gasoline Cost ($/Gallon)</label>
+        <input type="text" class="form-control" id="gasolineCost" value="$5.29">
+      </div>
     </form>
-    <!-- Results Display -->
-    <div id="tesla-results">
-      <!-- display calculated results here -->
-    </div>
+    <div id="tesla-results"></div>
   </section>
+  
 
   <!-- Gasoline Car Calculator -->
   <section class="container my-5">
