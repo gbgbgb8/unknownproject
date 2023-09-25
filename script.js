@@ -6,6 +6,7 @@ document.getElementById('referralLinkCredit').addEventListener('input', calculat
 document.getElementById('plannedMilesDriven').addEventListener('input', calculateTeslaCost);
 document.getElementById('electricityCost').addEventListener('input', calculateTeslaCost);
 document.getElementById('gasolineCost').addEventListener('input', calculateTeslaCost);
+document.getElementById('yearsOfOwnership').addEventListener('input', calculateTeslaCost);
 
 function calculateTeslaCost() {
   const basePrice = parseFloat(document.getElementById('teslaBasePrice').value.replace(/[^0-9.-]+/g, "")) || 0;
@@ -16,6 +17,7 @@ function calculateTeslaCost() {
   const plannedMilesDriven = parseFloat(document.getElementById('plannedMilesDriven').value.replace(/[^0-9.-]+/g, "")) || 0;
   const electricityCost = parseFloat(document.getElementById('electricityCost').value.replace(/[^0-9.-]+/g, "")) || 0;
   const gasolineCost = parseFloat(document.getElementById('gasolineCost').value.replace(/[^0-9.-]+/g, "")) || 0;
+  const yearsOfOwnership = parseFloat(document.getElementById('yearsOfOwnership').value) || 0;
   document.getElementById('tesla-results').innerText = `Total Cost: $${basePrice}`;
 }
 
