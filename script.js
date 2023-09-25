@@ -22,8 +22,6 @@ function updateCalculations() {
     let teslaTotalCost = parseFloat(document.getElementById('teslaBasePrice').value.replace(/[^0-9.-]+/g, "")) || 0;
     let gasolineTotalCost = parseFloat(document.getElementById('gasolineBasePrice').value.replace(/[^0-9.-]+/g, "")) || 0;
     
-    // Additional calculations for Tesla and Gasoline can go here
-    
     document.getElementById('tesla-results').innerText = `Total Cost: $${teslaTotalCost}`;
     document.getElementById('gasoline-results').innerText = `Total Cost: $${gasolineTotalCost}`;
     
