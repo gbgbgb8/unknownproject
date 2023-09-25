@@ -50,5 +50,4 @@ function showComparison() {
   document.getElementById('comparison-results').innerText = `Tesla is cheaper by: $${gasolineTotalCost - teslaTotalCost}`;
 }
 
-document.getElementById('tesla-calculator').addEventListener('input', showComparison);
-document.getElementById('gasoline-calculator').addEventListener('input', showComparison);
+document.getElementById('tesla-calculator').addEventListener
