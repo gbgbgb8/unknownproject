@@ -7,120 +7,107 @@
 </head>
 <body>
 
-  <header class="bg-primary text-white text-center py-5">
-    <h1>Discover the True Cost of Owning a Tesla Model 3 vs a Gasoline Car</h1>
-    <p>Your guide to making an informed decision</p>
-  </header>
-
   <section class="container my-5">
     <h2>Summary Comparison</h2>
-    <div id="comparison-results"></div>
+    <p id="comparison-results">Based on the values in the calculators below, your total cost of ownership (TCO) of the Tesla Model 3 is <span id="teslaSummaryCost">$0</span>, vs. <span id="gasolineSummaryCost">$0</span> for the Gasoline car.</p>
   </section>
 
   <div class="container my-5">
     <div class="row">
       <div class="col-md-6">
-        <section>
-          <h2>Tesla Model 3 Calculator</h2>
-          <form id="tesla-calculator">
-            <div class="mb-3">
-              <label for="teslaBasePrice" class="form-label">Base Price</label>
-              <input type="text" class="form-control" id="teslaBasePrice" value="$40,240">
-            </div>
-            <div class="mb-3">
-              <label for="destinationFee" class="form-label">Destination Fee</label>
-              <input type="text" class="form-control" id="destinationFee" value="$1,390">
-            </div>
-            <div class="mb-3">
-              <label for="additionalOptions" class="form-label">Additional Options</label>
-              <input type="text" class="form-control" id="additionalOptions" value="$0">
-            </div>
-            <div class="mb-3">
-              <label for="federalTaxCredit" class="form-label">Federal Tax Credit</label>
-              <input type="text" class="form-control" id="federalTaxCredit" value="-$7,500">
-            </div>
-            <div class="mb-3">
-              <label for="referralLinkCredit" class="form-label">Referral Link Credit</label>
-              <input type="text" class="form-control" id="referralLinkCredit" value="-$500">
-            </div>
-            <div class="mb-3">
-              <label for="plannedMilesDriven" class="form-label">Planned Miles Driven per Year</label>
-              <input type="text" class="form-control" id="plannedMilesDriven" value="15,000">
-            </div>
-            <div class="mb-3">
-              <label for="electricityCost" class="form-label">Electricity Cost ($/kWh)</label>
-              <input type="text" class="form-control" id="electricityCost" value="$0.16">
-            </div>
-            <div class="mb-3">
-              <label for="gasolineCost" class="form-label">Gasoline Cost ($/Gallon)</label>
-              <input type="text" class="form-control" id="gasolineCost" value="$5.29">
-            </div>
-            <div class="mb-3">
-              <label for="yearsOfOwnership" class="form-label">Years of Planned Ownership</label>
-              <input type="number" class="form-control" id="yearsOfOwnership" value="8">
-            </div>
-          </form>
-          <div id="tesla-results"></div>
-        </section>
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Tesla Model 3 Calculator</h2>
+            <form id="tesla-calculator">
+              <div class="mb-3">
+                <label for="teslaBasePrice" class="form-label">Base Price</label>
+                <input type="text" class="form-control" id="teslaBasePrice" value="$40,240">
+              </div>
+              <div class="mb-3">
+                <label for="destinationFee" class="form-label">Destination Fee</label>
+                <input type="text" class="form-control" id="destinationFee" value="$1,390">
+              </div>
+              <div class="mb-3">
+                <label for="additionalOptions" class="form-label">Additional Options</label>
+                <input type="text" class="form-control" id="additionalOptions" value="$0">
+              </div>
+              <div class="mb-3">
+                <label for="federalTaxCredit" class="form-label">Federal Tax Credit</label>
+                <input type="text" class="form-control" id="federalTaxCredit" value="-$7,500">
+              </div>
+              <div class="mb-3">
+                <label for="referralLinkCredit" class="form-label">Referral Link Credit</label>
+                <input type="text" class="form-control" id="referralLinkCredit" value="-$500">
+              </div>
+              <div class="mb-3">
+                <label for="plannedMilesDriven" class="form-label">Planned Miles Driven per Year</label>
+                <input type="text" class="form-control" id="plannedMilesDriven" value="15,000">
+              </div>
+              <div class="mb-3">
+                <label for="electricityCost" class="form-label">Electricity Cost ($/kWh)</label>
+                <input type="text" class="form-control" id="electricityCost" value="$0.16">
+              </div>
+              <div class="mb-3">
+                <label for="gasolineCost" class="form-label">Gasoline Cost ($/Gallon)</label>
+                <input type="text" class="form-control" id="gasolineCost" value="$5.29">
+              </div>
+              <div class="mb-3">
+                <label for="yearsOfOwnership" class="form-label">Years of Planned Ownership</label>
+                <input type="number" class="form-control" id="yearsOfOwnership" value="8">
+              </div>
+            </form>
+            <div id="tesla-results"></div>
+          </div>
+        </div>
       </div>
       <div class="col-md-6">
-        <section>
-          <h2>Gasoline Car Calculator</h2>
-          <form id="gasoline-calculator">
-            <div class="mb-3">
-              <label for="gasolineBasePrice" class="form-label">Base Price</label>
-              <input type="text" class="form-control" id="gasolineBasePrice" value="$21,900">
-            </div>
-            <div class="mb-3">
-              <label for="gasolineDestinationFee" class="form-label">Destination Fee</label>
-              <input type="text" class="form-control" id="gasolineDestinationFee" value="$1,095">
-            </div>
-            <div class="mb-3">
-              <label for="gasolineAdditionalOptions" class="form-label">Additional Options</label>
-              <input type="text" class="form-control" id="gasolineAdditionalOptions" value="$0">
-            </div>
-            <div class="mb-3">
-              <label for="gasolineFederalTaxCredit" class="form-label">Federal Tax Credit</label>
-              <input type="text" class="form-control" id="gasolineFederalTaxCredit" value="$0">
-            </div>
-            <div class="mb-3">
-              <label for="gasolineReferralLinkCredit" class="form-label">Referral Link Credit</label>
-              <input type="text" class="form-control" id="gasolineReferralLinkCredit" value="$0">
-            </div>
-            <div class="mb-3">
-              <label for="gasolinePlannedMilesDriven" class="form-label">Planned Miles Driven per Year</label>
-              <input type="text" class="form-control" id="gasolinePlannedMilesDriven" value="15,000">
-            </div>
-            <div class="mb-3">
-              <label for="gasolineMilesPerGallon" class="form-label">Miles per Gallon</label>
-              <input type="text" class="form-control" id="gasolineMilesPerGallon" value="32">
-            </div>
-            <div class="mb-3">
-              <label for="gasolineGasolineCost" class="form-label">Gasoline Cost ($/Gallon)</label>
-              <input type="text" class="form-control" id="gasolineGasolineCost" value="$5.29">
-            </div>
-            <div class="mb-3">
-              <label for="gasolineYearsOfOwnership" class="form-label">Years of Planned Ownership</label>
-              <input type="number" class="form-control" id="gasolineYearsOfOwnership" value="8">
-            </div>
-          </form>
-          <div id="gasoline-results"></div>
-        </section>
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Gasoline Car Calculator</h2>
+            <form id="gasoline-calculator">
+              <div class="mb-3">
+                <label for="gasolineBasePrice" class="form-label">Base Price</label>
+                <input type="text" class="form-control" id="gasolineBasePrice" value="$21,900">
+              </div>
+              <div class="mb-3">
+                <label for="gasolineDestinationFee" class="form-label">Destination Fee</label>
+                <input type="text" class="form-control" id="gasolineDestinationFee" value="$1,095">
+              </div>
+              <div class="mb-3">
+                <label for="gasolineAdditionalOptions" class="form-label">Additional Options</label>
+                <input type="text" class="form-control" id="gasolineAdditionalOptions" value="$0">
+              </div>
+              <div class="mb-3">
+                <label for="gasolineFederalTaxCredit" class="form-label">Federal Tax Credit</label>
+                <input type="text" class="form-control" id="gasolineFederalTaxCredit" value="$0">
+              </div>
+              <div class="mb-3">
+                <label for="gasolineReferralLinkCredit" class="form-label">Referral Link Credit</label>
+                <input type="text" class="form-control" id="gasolineReferralLinkCredit" value="$0">
+              </div>
+              <div class="mb-3">
+                <label for="gasolinePlannedMilesDriven" class="form-label">Planned Miles Driven per Year</label>
+                <input type="text" class="form-control" id="gasolinePlannedMilesDriven" value="15,000">
+              </div>
+              <div class="mb-3">
+                <label for="gasolineMilesPerGallon" class="form-label">Miles per Gallon</label>
+                <input type="text" class="form-control" id="gasolineMilesPerGallon" value="32">
+              </div>
+              <div class="mb-3">
+                <label for="gasolineGasolineCost" class="form-label">Gasoline Cost ($/Gallon)</label>
+                <input type="text" class="form-control" id="gasolineGasolineCost" value="$5.29">
+              </div>
+              <div class="mb-3">
+                <label for="gasolineYearsOfOwnership" class="form-label">Years of Planned Ownership</label>
+                <input type="number" class="form-control" id="gasolineYearsOfOwnership" value="8">
+              </div>
+            </form>
+            <div id="gasoline-results"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  <section class="container my-5">
-    <h2>Testimonials</h2>
-  </section>
-
-  <section class="container my-5">
-    <h2>FAQs</h2>
-  </section>
-
-  <footer class="bg-secondary text-white text-center py-3">
-    <p>Contact us: info@example.com</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
