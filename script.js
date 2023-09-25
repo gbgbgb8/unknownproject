@@ -20,8 +20,17 @@ document.getElementById('gasolineYearsOfOwnership').addEventListener('input', up
 
 function updateCalculations() {
     let teslaTotalCost = parseFloat(document.getElementById('teslaBasePrice').value.replace(/[^0-9.-]+/g, "")) || 0;
+    teslaTotalCost += parseFloat(document.getElementById('destinationFee').value.replace(/[^0-9.-]+/g, "")) || 0;
+    teslaTotalCost += parseFloat(document.getElementById('additionalOptions').value.replace(/[^0-9.-]+/g, "")) || 0;
+    teslaTotalCost += parseFloat(document.getElementById('federalTaxCredit').value.replace(/[^0-9.-]+/g, "")) || 0;
+    teslaTotalCost += parseFloat(document.getElementById('referralLinkCredit').value.replace(/[^0-9.-]+/g, "")) || 0;
+
     let gasolineTotalCost = parseFloat(document.getElementById('gasolineBasePrice').value.replace(/[^0-9.-]+/g, "")) || 0;
-    
+    gasolineTotalCost += parseFloat(document.getElementById('gasolineDestinationFee').value.replace(/[^0-9.-]+/g, "")) || 0;
+    gasolineTotalCost += parseFloat(document.getElementById('gasolineAdditionalOptions').value.replace(/[^0-9.-]+/g, "")) || 0;
+    gasolineTotalCost += parseFloat(document.getElementById('gasolineFederalTaxCredit').value.replace(/[^0-9.-]+/g, "")) || 0;
+    gasolineTotalCost += parseFloat(document.getElementById('gasolineReferralLinkCredit').value.replace(/[^0-9.-]+/g, "")) || 0;
+
     document.getElementById('tesla-results').innerText = `Total Cost: $${teslaTotalCost}`;
     document.getElementById('gasoline-results').innerText = `Total Cost: $${gasolineTotalCost}`;
     
